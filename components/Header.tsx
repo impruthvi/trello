@@ -8,6 +8,24 @@ function Header() {
   return (
     <header>
       <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
+        <div
+          className="
+        absolute
+        top-0
+        left-0
+        w-full
+        h-96
+        bg-gradient-to-br
+        from-pink-400
+        to-[#0055D1]
+        rounded-b-2xl
+        filter
+        blur-3xl
+        opacity-50
+        -z-50
+        "
+        />
+
         <Image
           src="https://links.papareact.com/c2cdd5"
           alt="Trello logo"
@@ -40,7 +58,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center md:py-5">
+      <div className="flex items-center justify-center px-5 py-2 md:py-5">
         <p className="flex items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit bg-white italic max-w-3xl text-[#0055D1]">
           <UserCircleIcon className="inline-block h-10 w-10 text-[#0055D1] mr-1" />
           GPT is summering your task for the day...
