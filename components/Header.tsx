@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import Image from "next/image";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import Avatar from "react-avatar";
 
 function Header() {
@@ -31,8 +31,20 @@ function Header() {
           </form>
 
           {/* Avtar */}
-          <Avatar name="Pruthvisinh Rajput" size="50" round={true} color="#0055D1" />
+          <Avatar
+            name="Pruthvisinh Rajput"
+            size="50"
+            round={true}
+            color="#0055D1"
+          />
         </div>
+      </div>
+
+      <div className="flex items-center justify-center md:py-5">
+        <p className="flex items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit bg-white italic max-w-3xl text-[#0055D1]">
+          <UserCircleIcon className="inline-block h-10 w-10 text-[#0055D1] mr-1" />
+          GPT is summering your task for the day...
+        </p>
       </div>
     </header>
   );
