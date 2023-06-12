@@ -1,3 +1,4 @@
+
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function Board() {
@@ -8,6 +9,7 @@ function Board() {
       </Droppable>
     </DragDropContext>
   );
+  
 }
 
 export default Board;
