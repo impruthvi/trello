@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#F5f6f8]">
+      <body className="bg-[#F5f6f8]" suppressHydrationWarning={true}>
         {children}
         <Modal />
       </body>
