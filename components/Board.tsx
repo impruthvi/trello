@@ -20,8 +20,10 @@ function Board() {
   }, [getBoard]);
 
   useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  }, [window.innerWidth]);
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+    }
+  }, []);
 
   const handleOnDragEnd = (result: DropResult) => {
     const { destination, source, draggableId, type } = result;
