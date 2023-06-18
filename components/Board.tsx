@@ -6,7 +6,7 @@ import { DragDropContext, DropResult, Droppable } from "react-beautiful-dnd";
 import Column from "./Column";
 
 function Board() {
-  const [screentWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screentWidth, setScreenWidth] = useState(Number);
   const direction = screentWidth <= 600 ? "vertical" : "horizontal";
 
   const [board, getBoard, setBoard, updateTodoInDB] = useBoardStore((state) => [
