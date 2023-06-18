@@ -60,7 +60,8 @@ export const useBoardStore = create<BoardState>((set, get) => ({
     });
 
     if (todo.image) {
-      await storage.deleteFile(todo.image.bucketId, todo.image.fileId);
+      const imageObject: Image = JSON.parse(todo.image.toString());
+      await storage.deleteFile(imageObject.bucketId, imageObject.fileId);
     }
 
     await database.deleteDocument(
