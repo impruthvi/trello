@@ -27,7 +27,7 @@ function Header() {
       setLoading(false);
     };
 
-    // fetchSuggesionFunc();
+    fetchSuggesionFunc();
   
   }, [board]);
 
