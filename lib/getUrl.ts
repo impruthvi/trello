@@ -1,8 +1,7 @@
 import { storage } from "@/appwrite";
 
 const getUrl = async (image: Image) => {
-  const imageObject: Image = JSON.parse(image.toString());
-  const url = storage.getFilePreview(imageObject.bucketId, imageObject.fileId);
+  const url = storage.getFilePreview(image.bucketId, image.fileId);
 
   return url;
 };

@@ -32,7 +32,12 @@ function TodoCard({
   useEffect(() => {
     if (todo.image) {
       const fetchImage = async () => {
-        const url = await getUrl(todo.image!);
+        let url;
+        if (typeof todo.image === "string") {
+          url = await getUrl(JSON.parse(todo.image!));
+        } else {
+          url = await getUrl(todo.image!);
+        }
 
         if (url) setImageUrl(url.toString());
       };
